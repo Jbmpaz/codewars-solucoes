@@ -1,4 +1,1 @@
 eu não quero nenhum codigo, a unica coisa que vc vai me falar é se existe alguma função e metodos em js que podem ajudar com o desafio proposto no codewars
-
-
-
