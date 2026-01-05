@@ -1,33 +1,36 @@
 function somar(arrayMaior, arrayIgualOuMaior) {
-  // console.log(arrayMaior)
-  // console.log(arrayIgualOuMaior)
-
   let i = 0;
   let varTemp = 0;
   let arrayTemp = [];
 
-  arrayMaior.forEach((element, indice, arrayMaior) => {
+  arrayMaior.forEach((element, indice, arrayM) => {
     if (arrayIgualOuMaior[i] == undefined) {
       arrayIgualOuMaior[i] = 0;
     }
 
-    let somaDosElemetos = element + arrayIgualOuMaior[i];
-    if (somaDosElemetos > 9) {
-      let arrayTemp = separarEmArray(somaDosElemetos.toString());
-    //   console.log(arrayTemp)
-      somaDosElemetos = arrayTemp[arrayTemp.length - 1]
-      varTemp = arrayTemp[0]
+    let somaDosElemetos = element + arrayIgualOuMaior[i] + varTemp;
+    varTemp = 0;
+
+    if (indice != arrayM.length - 1) {
+      if (somaDosElemetos > 9) {
+        let arrayTemp2 = separarEmArray(somaDosElemetos.toString());
+        somaDosElemetos = arrayTemp2[0];
+        varTemp = arrayTemp2[1];
+      }
     }
 
-    if (indice == arrayMaior.length - 1 && varTemp != 0) {
-        somaDosElemetos = varTemp
+    if (indice == arrayM.length - 1) {
+      somaDosElemetos += varTemp;
+      if (somaDosElemetos != 0) {
+        arrayTemp.unshift(somaDosElemetos);
+      }
+    } else {
+      arrayTemp.unshift(somaDosElemetos);
     }
 
-    arrayTemp.unshift(somaDosElemetos);
     i++;
   });
 
-  // console.log(arrayTemp);
   return arrayTemp;
 }
 
@@ -61,8 +64,7 @@ function sumStrings(a, b) {
   return variavelResult;
 }
 
-// sumStrings('123','456');
-sumStrings('8797', '45');
-// sumStrings("800", "9567");
-// sumStrings("8", "9");
-
+sumStrings('123','456'); // 579
+sumStrings('8797', '45'); // 8842
+sumStrings("800", "9567"); // 10367
+sumStrings("00103", "08567"); // 8670
