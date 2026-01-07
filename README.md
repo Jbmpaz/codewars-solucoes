@@ -22,5 +22,5 @@ Os desafios são resolvidos com o objetivo de **aprimorar o raciocínio lógico*
 
 ## 📂 Organização do Repositório
 
-Os desafios são organizados pelo **Nome do Desafio** da plataforma do CodeWars, contendo o desafio proposto e minha solução que eu implementei com a linguagem escolhida.
+Os desafios são organizados pelo **Nome do Desafio** dentro da pasta com o nivel da dificuldade do desafio da plataforma do CodeWars, contendo o desafio proposto e minha solução que eu implementei com a linguagem escolhida.
 
